@@ -15,6 +15,7 @@ run:
   - |
     apt-get update -y && apt-get upgrade -y
     apt-get install python3 -y
+    apt-get install python3-pip -y
     cd pipeline-app
     pip install numpy scipy pyscaffold
     pip install -U interpret
