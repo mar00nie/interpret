@@ -1,0 +1,20 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source: {repository: ubuntu}
+
+inputs:
+- name: pipeline-app
+
+run:
+  path: sh
+  args:
+  - -c
+  - |
+    apt-get update -y && apt-get upgrade -y
+    apt-get install python3 -y
+    cd pipeline-app
+    pip install numpy scipy pyscaffold
+    pip install -U interpret
