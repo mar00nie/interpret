@@ -1,5 +1,5 @@
 # Set pipeline
-fly -t pipeline-app sp -c interpret/job-interpret.yml -p build-test
+fly -t pipeline-app sp -c interpret/azure-pipelines.yml -p build-test
 
 # Unpause pipeline
 fly -t pipeline-app up -p build-test
